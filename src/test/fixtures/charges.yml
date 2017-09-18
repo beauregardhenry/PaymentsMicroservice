@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  charge_id: MyString
+  customer_id: MyString
+  paid: false
+  metadata: 
+
+two:
+  charge_id: MyString
+  customer_id: MyString
+  paid: false
+  metadata: 
