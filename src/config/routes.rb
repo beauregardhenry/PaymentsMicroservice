@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  get 'charges/index'
+
+  get 'charges/create'
+
+  get 'charges/show'
+
+  resources :charges, only: [:index, :create, :show]
+  resources :customers, exclude: [:new, :edit]
 end

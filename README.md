@@ -17,7 +17,7 @@ A payments microservice to securely and efficiently collect payment from many di
 
 You'll use Stripe's client libraries to get the stripe ids needed to power creating customers & subscripts & one off charges.
 
-You'll pass those values to your service backend and then the backend will use them to speak to this service to "let go of them". 
+You'll pass those values to your service backend and then the backend will use them to speak to this service to "let go of them".
 
 Your service will need to track all the relevant ids emitted by the payments microservice (customer, charges, subscriptions, and cards) but can query the payments microservice to determine the current state of any of those things. In this way, you can determine if cards are valid, if charges have succeeded, and if subscriptions are hunky doory without having to spend any cycles managing those things.
 
@@ -27,7 +27,15 @@ A customer will likely line up one to one with your service's user construct. A 
 
 ### Create a customer
 
+### Delete a customer
+
+### Edit a customer
+
 ### Add a card to a customer
+
+### Delete a card from a customer
+
+### Mark a card as default
 
 Stripe calls these sources.
 
@@ -35,14 +43,10 @@ Stripe calls these sources.
 
 ### Lookup customers
 
-### Lookup cards
+### Lookup a customer's cards
 
 ### Lookup charges
 
-### Create a subscription
+### Cancel a charge
 
-### Delete a subscription
-
-### Update a subscription
-
-### Lookup subscriptions
+### Refund a charge
